@@ -6,9 +6,8 @@ function GlobalEvent() {
         if (event.target.localName === "img") {
             const clickId = event.target.parentNode.id;
             const flatArray = globalState.flat();
-            console.log(flatArray.find((el) => el.id == clickId));
-            
-            
+            const square = flatArray.find((el) => el.id == clickId);
+            //console.log(square);
         }
         
     });
