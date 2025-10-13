@@ -1,5 +1,5 @@
 # This is Infinity Chess
-This is a chess website which is created by out team "Infinity Coders" <br>
+This is a chess website which is created by our team: "Infinity Coders" <br>
 Members:<br>
 Chandra Sekhar Ghosh (myself): Backend Devoloper <br>
 Soumik Ghosal: Backend/ Web Tester <br>
