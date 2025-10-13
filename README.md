@@ -6,4 +6,4 @@ Soumik Ghosal: Backend/ Web Tester <br>
 SK Fardeen Mahmud: Front-End Devoloper <br>
 Firdaushi Parbhin: Designer
 <br>
-part 6 completed
+(part 6 completed)
