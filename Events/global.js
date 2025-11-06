@@ -1,10 +1,17 @@
 import { ROOT_DIV } from "../Helper/constants.js";
 import { globalState } from "../index.js";
 
-function whitePawnClick() {
-    console.log("White Pawn Clicked");
-    
-}
+function whitePawnClick({piece}) {
+    const current_pos = piece.current_position;
+    // on initial position
+    if (current_pos[1] == "2") {
+        const highlightSquareIds = [
+            `${current_pos[0]}${Number(current_pos[1]) + 1}`,
+            `${current_pos[0]}${Number(current_pos[1]) + 2}`,
+        ];
+        console.log(highlightSquareIds);       
+    }
+}    
 
 function GlobalEvent() {
     ROOT_DIV.addEventListener("click", function (event) {
@@ -14,7 +21,7 @@ function GlobalEvent() {
             const square = flatArray.find((el) => el.id == clickId);
             //console.log(square);
             if (square.piece.piece_name == "WHITE_PAWN") {
-                whitePawnClick();
+                whitePawnClick(square);
             }
         }
         
