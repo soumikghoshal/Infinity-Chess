@@ -115,12 +115,19 @@ function renderHighlight(squareId) {
     const hightlightSpan = document.createElement("span");
     hightlightSpan.classList.add("highlight");
     document.getElementById(squareId).appendChild(hightlightSpan);
+    clearHightlight();
 }
 
 //clear all hightlights from the board
 function clearHightlight() {
     const flatData = globalState.flat();
-    // console.log(flatData);
+    flatData.forEach((el) => {
+        console.log(el);
+        
+        if (el.highlighted) {
+            console.log(el);
+        }
+    });
     
 }
 

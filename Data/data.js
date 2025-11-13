@@ -1,13 +1,14 @@
+import { renderHighlight } from "../Rander/main.js";
 
 //for each square
 function Square(colour, id, piece) {
 
-    const hightlight = function (){
-        console.log("square");
-        console.log(this);
-    }
+    const highlight = function (){
+        renderHighlight(this.id);
+        this.hightlighted = true;
+    };
 
-    return { colour, id, piece, hightlight };
+    return { colour, id, piece, highlight };
 }
 
 function SquareRow(rowId) {

@@ -20,7 +20,7 @@ function whitePawnClick({piece}) {
             globalState.forEach((row) => {
                 row.forEach((element) => {
                     if (element.id == hightlight) {
-                        element.hightlight(true);
+                        element.highlight(true);
                         //      
                     }
                 });
