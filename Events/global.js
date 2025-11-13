@@ -1,6 +1,7 @@
 import { ROOT_DIV } from "../Helper/constants.js";
 import { globalState } from "../index.js";
 import { renderHighlight } from "../Rander/main.js";
+import { hightlight_state } from "../Helper/constants.js";
 
 function whitePawnClick({piece}) {
     const current_pos = piece.current_position;
@@ -22,8 +23,10 @@ function whitePawnClick({piece}) {
                     }
                 });
             });
-
+            
+            if (hightlight_state) clearHightlight();
             renderHighlight(hightlight);
+            hightlight_state = true;
         });
     }
     console.log(globalState);

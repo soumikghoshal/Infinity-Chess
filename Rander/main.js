@@ -1,8 +1,8 @@
 // import { blackPawn } from "../Data/pieces.js";
 // import { whitePawn } from "../Data/pieces.js";
 import * as piece from "../Data/pieces.js";
-
 import { ROOT_DIV } from "../Helper/constants.js";
+import { globalState } from "../index.js";
 
 //use to render pieces on board
 function pieceRender(data) {
@@ -115,6 +115,19 @@ function renderHighlight(squareId) {
     const hightlightSpan = document.createElement("span");
     hightlightSpan.classList.add("highlight");
     document.getElementById(squareId).appendChild(hightlightSpan);
+}
+
+//clear all hightlights from the board
+function clearHightlight() {
+    globalState.forEach((row) => {
+                row.forEach((element) => {
+                    if (element.id == hightlight) {
+                        element.hightlight = true;
+                        //  console.log(element);
+                        
+                    }
+                });
+            });
 }
 
 export { initGameRander, renderHighlight };

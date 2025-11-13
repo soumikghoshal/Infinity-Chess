@@ -1,3 +1,6 @@
 const ROOT_DIV =document.getElementById("root");
 
-export {ROOT_DIV};
+//hightlighted or not
+let hightlight_state = false;
+
+export { ROOT_DIV, hightlight_state };
